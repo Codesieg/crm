@@ -1,5 +1,5 @@
 <?php
-
+// Le manager gére les differentes actions à réaliser en BDD
 class clientManager
 {
  public $dbh;

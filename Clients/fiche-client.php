@@ -39,6 +39,7 @@
                                 <!-- Section listing clients -->
                                 <?php
                                 // var_dump($_GET['id']);
+                                
                                 $clientChoisi = (int) $_GET['id'];
                                 // var_dump($clientChoisi);
                                 require_once('../include/config.php');
@@ -47,11 +48,13 @@
                                     echo ('<div class="card d-connect">');
                                     echo ('<div class="card-header card-header-primary">');
                                     echo ('<h4 class="card-title"><a href="/clients/fiche-client.php/?id=' . $donnees['id'] . '">'. $donnees['client'] . '</a></h4>');
+                                    echo ('<i class="button edit" id="btn-character-story-edit">editer</i>');
                                     echo ('</div>');
                                     echo ('<div class="card-body">' . $donnees['nomContact'] . '</div>');
                                     echo ('<div class="card-body"> Adresse : ' . $donnees['adresse'] . '</div>');
                                     echo ('<div class="card-body"> Code Postal : ' . $donnees['codePostal'] . ' ' . $donnees['ville'] . '</div>');
                                     echo ('</div>');
+                                    // il faut ecrire de quoi editer un formulaire, passer les valeurs de la bdd dedans, les modifiers puis les mettres à jours dans la bdd. 
                                 } 
                                 $reponse->closeCursor(); // Termine le traitement de la requête
                                 ?>
@@ -59,7 +62,7 @@
                         </div>
                     </div>
           
-           <!-- Fin contenu de la page -->
+          <!-- Fin contenu de la page -->
         </div>
         </div>
       </div>

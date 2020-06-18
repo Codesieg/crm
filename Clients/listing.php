@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> <!-- https://material.io/resources/icons/?icon=devices_other&style=baseline -->
     <!-- Material Kit CSS -->
-    <link href="../css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
-    <link href="../css/main.css" rel="stylesheet" />
+    <link href="/../css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+    <link href="/../css/main.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                                 while ($donnees = $reponse->fetch()) {
                                     echo ('<div class="card d-connect">');
                                     echo ('<div class="card-header card-header-primary">');
-                                    echo ('<h4 class="card-title">' . $donnees['client'] . '</h4>');
+                                    echo ('<h4 class="card-title"><a href="/clients/fiche-client.php/?id=' . $donnees['id'] . '">'. $donnees['client'] . '</a></h4>');
                                     echo ('</div>');
                                     echo ('<div class="card-body">' . $donnees['nomContact'] . '</div>');
                                     echo ('</div>');
